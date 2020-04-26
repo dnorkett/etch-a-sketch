@@ -7,11 +7,11 @@ const drawGrid = (e) => {
     let n = lengthInput.value;
     let existingGrid = document.querySelector('.container');
 
-    if (existingGrid) {
-        existingGrid.parentNode.removeChild(existingGrid);
-    }
-
     if (n > 0) {
+        if (existingGrid) {
+            existingGrid.parentNode.removeChild(existingGrid);
+        }
+
         let containerDiv = document.createElement('div');
         containerDiv.classList.add('container');
 
